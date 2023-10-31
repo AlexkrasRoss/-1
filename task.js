@@ -15,11 +15,14 @@ function solveEquation(a, b, c) {
     }
      else if (discriminant < 0){
        console.log('Дискриминант меньше нуля. \nКорней нет!');
-       return arr;
-     }
+    }
     return arr;
 };
 
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
-  
-}
+    let monthlyPercent = (percent/12/100);
+    let monthlyPayment = (amount - contribution) * (monthlyPercent * (Math.pow(1+monthlyPercent,countMonths)))/(Math.pow(1+monthlyPercent,countMonths)-1);
+    let totalAmount = monthlyPayment * countMonths;
+    console.log(Math.floor(totalAmount*100)/100);
+  }
+  calculateTotalMortgage(10,1000,50000,12);
