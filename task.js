@@ -3,10 +3,8 @@ function solveEquation(a, b, c) {
   let arr = [];
   const discriminant = (b ** 2 - (4 * a * c));
   if (discriminant > 0){
-    arr.push((- b + Math.sqrt(discriminant)) / (2 * a))
-    &&
-    arr.push((- b - Math.sqrt(discriminant)) / (2 * a))
-      console.log('Дискриминант равен ' + discriminant + '\nПервый крень уравнения равен ' + arr[0] + '\nВторой корень уравнения равен ' + arr[1]);
+    arr.push((- b + Math.sqrt(discriminant)) / (2 * a),(- b - Math.sqrt(discriminant)) / (2 * a));
+    console.log('Дискриминант равен ' + discriminant + '\nПервый крень уравнения равен ' + arr[0] + '\nВторой корень уравнения равен ' + arr[1]);
     } 
   
     else if (discriminant === 0){
